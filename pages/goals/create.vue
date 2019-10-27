@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <div>
+    <div class="text-center">
+      <h1>Your Goal</h1>
+    </div>
+    <form>
       <div class="form-group">
         <label for="goal-title">Title</label>
         <input
@@ -31,34 +34,30 @@
           class="form-control"
         />
       </div>
-      <div class="form-group">
-        <GoalPurpose />
-        <label for="purpose">Purpose</label>
-        <textarea
-          id="purpose"
-          v-model="goal.purpose"
-          class="form-control"
-          placeholder="My purpose for wanting to achieve my goal is..."
-        ></textarea>
-      </div>
+      <GoalPurpose :purpose="purpose" />
+      <GoalAIM :aim="aim" />
       <button class="btn btn-primary" type="button" @click="saveGoal">
         Save
       </button>
-    </div>
+    </form>
   </div>
 </template>
 
 <script>
 import models from '@/models'
 import GoalPurpose from '@/components/GoalPurpose'
+import GoalAIM from '@/components/GoalAIM'
 
 export default {
   components: {
-    GoalPurpose
+    GoalPurpose,
+    GoalAIM
   },
   data() {
     return {
-      goal: new models.Goal()
+      goal: new models.Goal(),
+      purpose: {},
+      aim: {}
     }
   },
   methods: {
