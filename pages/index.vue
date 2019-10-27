@@ -1,10 +1,13 @@
 <template>
   <div class="container">
-    <div>
+    <div class="header">
       <h1 class="title">Goal Tracker</h1>
       <h2 class="subtitle">
         Goal tracking app based on the PACE Performance Strategy
       </h2>
+      <div class="container">
+        <nuxt-link class="btn btn-primary" to="/goals">Goals</nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -18,10 +21,10 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+.header {
   display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
   align-items: center;
   text-align: center;
