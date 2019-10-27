@@ -1,6 +1,6 @@
-import moment from 'moment'
-import randomstring from 'randomstring'
-import ImmutableValue from './immutable-value'
+const moment = require('moment')
+const randomstring = require('randomstring')
+const ImmutableValue = require('./immutable-value')
 
 export default class GoalModel {
   constructor({ title, text, purpose, deadline, id } = {}) {

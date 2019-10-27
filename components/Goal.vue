@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { Goal } from '@/models'
+import Goal from '@/models/goal'
 
 export default {
   name: 'Goal',
