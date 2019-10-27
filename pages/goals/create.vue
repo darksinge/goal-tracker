@@ -47,6 +47,7 @@
 import models from '@/models'
 import GoalPurpose from '@/components/GoalPurpose'
 import GoalAIM from '@/components/GoalAIM'
+import AIM from '@/models/aim'
 
 export default {
   components: {
@@ -57,7 +58,7 @@ export default {
     return {
       goal: new models.Goal(),
       purpose: {},
-      aim: {}
+      aim: new AIM()
     }
   },
   methods: {
@@ -67,3 +68,9 @@ export default {
   }
 }
 </script>
+
+<style>
+ol li {
+  list-style: decimal outside;
+}
+</style>
