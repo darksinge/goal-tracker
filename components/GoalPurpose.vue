@@ -94,7 +94,7 @@
         </div>
       </li>
     </ol>
-    <p>
+    <p class="lead">
       Considering the answers to all of the above questions, with as much detail
       as possible, write down your purpose for wanting to achieve your goal.
     </p>

@@ -9,7 +9,7 @@ export default class GoalModel {
     this.purpose = purpose || ''
     this.done = false
     this._deadline = moment(deadline)
-    this._immutableId = new ImmutableValue(id || randomstring.generate(7))
+    this._immutableId = new ImmutableValue(id || randomstring.generate(12))
   }
 
   get id() {

@@ -1,49 +1,24 @@
 <template>
-  <div class="container">
-    <div class="text-center">
-      <h1>Your Goal</h1>
+  <div class="container" style="margin-bottom: 48px">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form>
+          <GoalDescription :goal="goal" />
+          <hr />
+          <GoalPurpose :purpose="purpose" />
+          <hr />
+          <GoalAIM :aim="aim" />
+          <button class="btn btn-primary" type="button" @click="saveGoal">
+            Save
+          </button>
+        </form>
+      </div>
     </div>
-    <form>
-      <div class="form-group">
-        <label for="goal-title">Title</label>
-        <input
-          id="goal-title"
-          v-model="goal.title"
-          type="text"
-          class="form-control"
-          aria-describedby="titleHelp"
-          placeholder="My Ultimate Goal!"
-        />
-      </div>
-      <div class="form-group">
-        <label for="goal-text">Description</label>
-        <textarea
-          id="goal-text"
-          v-model="goal.text"
-          class="form-control"
-          placeholder="My goal is..."
-          rows="3"
-        ></textarea>
-      </div>
-      <div class="form-group">
-        <label for="deadline">Deadline</label>
-        <input
-          id="deadline"
-          v-model="goal.deadline"
-          type="date"
-          class="form-control"
-        />
-      </div>
-      <GoalPurpose :purpose="purpose" />
-      <GoalAIM :aim="aim" />
-      <button class="btn btn-primary" type="button" @click="saveGoal">
-        Save
-      </button>
-    </form>
   </div>
 </template>
 
 <script>
+import GoalDescription from '@/components/GoalDescription'
 import models from '@/models'
 import GoalPurpose from '@/components/GoalPurpose'
 import GoalAIM from '@/components/GoalAIM'
@@ -51,6 +26,7 @@ import AIM from '@/models/aim'
 
 export default {
   components: {
+    GoalDescription,
     GoalPurpose,
     GoalAIM
   },
